@@ -1,9 +1,22 @@
+import sys
+import os
 from flask import Flask, jsonify, request, render_template
-from engine import RecommendationEngine
-import pandas as pd
+
+# Local path fix for Vercel
+sys.path.append(os.path.dirname(__file__))
+
+try:
+    from engine import RecommendationEngine
+    engine = RecommendationEngine()
+except Exception as e:
+    print(f"FAILED TO LOAD ENGINE: {e}")
+    engine = None
 
 app = Flask(__name__)
-engine = RecommendationEngine()
+
+@app.route('/api/health')
+def health():
+    return jsonify({"status": "healthy", "engine_loaded": engine is not None})
 
 @app.route('/')
 def index():
@@ -11,15 +24,21 @@ def index():
 
 @app.route('/api/products', methods=['GET'])
 def get_products():
+    if not engine:
+        return jsonify({"error": "Engine not loaded"}), 503
     return jsonify(engine.products.to_dict(orient='records'))
 
 @app.route('/api/recommendations/<int:user_id>', methods=['GET'])
 def get_recommendations(user_id):
+    if not engine:
+        return jsonify({"error": "Engine not loaded"}), 503
     recommendations = engine.get_recommendations(user_id)
     return jsonify(recommendations)
 
 @app.route('/api/similar/<int:product_id>', methods=['GET'])
 def get_similar(product_id):
+    if not engine:
+        return jsonify({"error": "Engine not loaded"}), 503
     similar = engine.get_similar_products(product_id)
     return jsonify(similar)
 
@@ -42,6 +61,8 @@ def how_it_works():
 
 @app.route('/api/engine/stats', methods=['GET'])
 def get_stats():
+    if not engine:
+        return jsonify({"error": "Engine not loaded"}), 503
     # Return actual stats from the engine
     return jsonify({
         'accuracy': 0.984,
