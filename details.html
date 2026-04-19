@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&amp;family=Inter:wght@300;400;500&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "tertiary-dim": "#f27794",
+                    "secondary-fixed-dim": "#00d7f0",
+                    "error-dim": "#d73357",
+                    "secondary-fixed": "#26e6ff",
+                    "surface-container-highest": "#262627",
+                    "tertiary-fixed": "#ff8fa8",
+                    "on-primary-fixed-variant": "#470071",
+                    "surface-container-lowest": "#000000",
+                    "outline": "#767576",
+                    "surface-dim": "#0e0e0f",
+                    "on-surface-variant": "#adaaab",
+                    "on-secondary": "#004d57",
+                    "primary-dim": "#aa30fa",
+                    "outline-variant": "#484849",
+                    "primary": "#d394ff",
+                    "on-secondary-fixed-variant": "#005964",
+                    "on-tertiary-container": "#5a0023",
+                    "tertiary-fixed-dim": "#f87c99",
+                    "error": "#ff6e84",
+                    "surface-bright": "#2c2c2d",
+                    "on-primary": "#4a0076",
+                    "surface": "#0e0e0f",
+                    "primary-fixed-dim": "#c26bff",
+                    "surface-tint": "#d394ff",
+                    "on-tertiary-fixed": "#380013",
+                    "secondary-container": "#006875",
+                    "on-primary-fixed": "#000000",
+                    "on-error": "#490013",
+                    "inverse-primary": "#9100e0",
+                    "error-container": "#a70138",
+                    "tertiary": "#ff98ae",
+                    "tertiary-container": "#ff819f",
+                    "on-secondary-container": "#e8fbff",
+                    "surface-container-low": "#131314",
+                    "on-background": "#ffffff",
+                    "on-secondary-fixed": "#003a42",
+                    "on-error-container": "#ffb2b9",
+                    "inverse-surface": "#fcf8f9",
+                    "surface-container-high": "#201f21",
+                    "primary-fixed": "#cb80ff",
+                    "on-surface": "#ffffff",
+                    "background": "#0e0e0f",
+                    "on-tertiary-fixed-variant": "#711132",
+                    "secondary-dim": "#00d4ec",
+                    "inverse-on-surface": "#565556",
+                    "surface-container": "#19191b",
+                    "on-primary-container": "#39005c",
+                    "surface-variant": "#262627",
+                    "secondary": "#00e3fd",
+                    "primary-container": "#cb80ff",
+                    "on-tertiary": "#6a0a2d"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "fontFamily": {
+                    "headline": ["Manrope"],
+                    "body": ["Manrope"],
+                    "label": ["Inter"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+        }
+        .tonal-transition {
+            transition: background-color 0.3s ease;
+        }
+        .glass-glow {
+            box-shadow: inset 0 1px 1px 0 rgba(255, 255, 255, 0.05);
+        }
+        ::-webkit-scrollbar {
+            display: none;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background text-on-surface font-body selection:bg-primary selection:text-on-primary-container">
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full z-50 bg-zinc-950/40 backdrop-blur-xl shadow-[0_8px_32px_rgba(211,148,255,0.08)] tonal-transition bg-zinc-900/20">
+<div class="flex justify-between items-center px-6 py-4 w-full">
+<button class="text-purple-400 hover:opacity-80 transition-opacity active:scale-95 duration-200">
+<span class="material-symbols-outlined">arrow_back</span>
+</button>
+<h1 class="font-manrope text-sm tracking-tight text-white font-extralight tracking-tighter text-xl">Product Details</h1>
+<button class="text-purple-400 hover:opacity-80 transition-opacity active:scale-95 duration-200">
+<span class="material-symbols-outlined">shopping_bag</span>
+</button>
+</div>
+</header>
+<main class="pt-20 pb-32 max-w-7xl mx-auto px-4 md:px-8">
+<!-- Hero Section -->
+<section class="relative min-h-[530px] flex flex-col items-center justify-center mb-12">
+<!-- Background Glows -->
+<div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[300px] h-[300px] bg-primary/20 blur-[120px] rounded-full"></div>
+<div class="absolute top-1/3 right-1/4 w-[200px] h-[200px] bg-secondary/10 blur-[100px] rounded-full"></div>
+<!-- Main Product Image -->
+<div class="relative z-10 w-full max-w-2xl transform hover:scale-[1.02] transition-transform duration-700 ease-out">
+<img alt="Futuristic audio device" class="w-full h-auto drop-shadow-[0_35px_60px_rgba(211,148,255,0.2)]" data-alt="Sleek metallic futuristic headphone set with glowing purple accents on a dark obsidian background with ambient atmospheric lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBSiLBX7kK04WR9yYZ363w94mVEwk_pj8FhQgTnZoLg59kv-mqG34NAPB231nmaOCoJPBhSbGeAqamR9jm3hG8cl0timNALPYXt7Id98QVGObetVK1q5P9eww70sl2arUnPr2qo-F6N2x30PVeI6Tj2CRZqQOCuaDDvTImJLmbq_OQndIIZZHyl-XNBw678JENzhq_zRNrdT8z8HWOo71nk_T1pGtqee5yaNCo2MxO8TvmHTQ68yOKMvqSWiDvlhyCLasqpkFcx61oE"/>
+</div>
+<!-- Floating Label -->
+<div class="mt-8 text-center">
+<span class="font-label text-[10px] tracking-[0.2em] text-primary uppercase mb-2 block">Series VII · Limited Edition</span>
+<h2 class="font-headline text-4xl md:text-6xl font-extralight tracking-tighter text-white">Ethereal Phantom</h2>
+</div>
+</section>
+<!-- Bento Grid Info -->
+<div class="grid grid-cols-1 md:grid-cols-12 gap-6 mb-16">
+<!-- Description Card -->
+<div class="md:col-span-8 p-8 rounded-xl bg-surface-container-low glass-glow relative overflow-hidden group">
+<div class="relative z-10">
+<h3 class="font-headline text-xl font-light text-white mb-4">The Narrative</h3>
+<p class="text-on-surface-variant font-light leading-relaxed text-lg max-w-2xl">
+                        Designed at the intersection of atmospheric engineering and acoustic luxury. The Phantom series utilizes bio-resonant graphene drivers to deliver a soundstage that feels less like listening and more like existing within the frequency. Pure, weightless, and absolute.
+                    </p>
+</div>
+<div class="absolute -right-12 -bottom-12 w-48 h-48 bg-primary/5 blur-3xl group-hover:bg-primary/10 transition-colors"></div>
+</div>
+<!-- Price & Buy Card -->
+<div class="md:col-span-4 p-8 rounded-xl bg-surface-container-highest glass-glow border-t border-l border-white/5 flex flex-col justify-between">
+<div>
+<span class="font-label text-sm text-secondary tracking-widest">CURRENT PRICE</span>
+<div class="flex items-baseline gap-2 mt-2">
+<span class="text-4xl font-headline font-extralight text-white">$2,499</span>
+<span class="text-on-surface-variant line-through text-sm font-light">$3,200</span>
+</div>
+</div>
+<div class="mt-8 space-y-4">
+<!-- Buy Now Button -->
+<button class="w-full py-4 rounded-full bg-gradient-to-r from-primary to-primary-container text-on-primary font-headline font-semibold tracking-tight hover:opacity-90 active:scale-[0.98] transition-all shadow-lg shadow-primary/20">
+                        Buy Now
+                    </button>
+<!-- Add to Cart Button -->
+<button class="w-full py-4 rounded-full bg-surface-variant/20 border border-outline-variant/30 text-secondary font-headline font-medium hover:bg-surface-variant/30 active:scale-[0.98] transition-all backdrop-blur-md">
+                        Add to Cart
+                    </button>
+</div>
+</div>
+<!-- Specs Grid (Asymmetric) -->
+<div class="md:col-span-12 grid grid-cols-2 md:grid-cols-4 gap-4">
+<div class="p-6 rounded-xl bg-surface-container-high hover:bg-surface-container-highest transition-colors group">
+<span class="material-symbols-outlined text-primary mb-3">speed</span>
+<div class="text-white font-headline text-lg font-light">0.01ms</div>
+<div class="text-on-surface-variant font-label text-xs">LATENCY</div>
+</div>
+<div class="p-6 rounded-xl bg-surface-container-high hover:bg-surface-container-highest transition-colors group">
+<span class="material-symbols-outlined text-secondary mb-3">battery_charging_full</span>
+<div class="text-white font-headline text-lg font-light">72 Hours</div>
+<div class="text-on-surface-variant font-label text-xs">PLAYTIME</div>
+</div>
+<div class="p-6 rounded-xl bg-surface-container-high hover:bg-surface-container-highest transition-colors group">
+<span class="material-symbols-outlined text-tertiary mb-3">waves</span>
+<div class="text-white font-headline text-lg font-light">120dB</div>
+<div class="text-on-surface-variant font-label text-xs">SENSITIVITY</div>
+</div>
+<div class="p-6 rounded-xl bg-surface-container-high hover:bg-surface-container-highest transition-colors group">
+<span class="material-symbols-outlined text-primary-dim mb-3">memory</span>
+<div class="text-white font-headline text-lg font-light">V3 Core</div>
+<div class="text-on-surface-variant font-label text-xs">PROCESSOR</div>
+</div>
+</div>
+</div>
+<!-- You Might Also Like Carousel -->
+<section class="mb-12">
+<div class="flex justify-between items-end mb-8 px-2">
+<div>
+<h3 class="font-headline text-2xl font-extralight text-white tracking-tight">Curation</h3>
+<p class="text-on-surface-variant text-sm font-label">Similar artifacts from the vault</p>
+</div>
+<div class="flex gap-2">
+<button class="p-2 rounded-full bg-surface-container-high text-on-surface hover:bg-primary hover:text-on-primary transition-all">
+<span class="material-symbols-outlined text-sm">chevron_left</span>
+</button>
+<button class="p-2 rounded-full bg-surface-container-high text-on-surface hover:bg-primary hover:text-on-primary transition-all">
+<span class="material-symbols-outlined text-sm">chevron_right</span>
+</button>
+</div>
+</div>
+<div class="flex gap-6 overflow-x-auto pb-8 snap-x">
+<!-- Product Card 1 -->
+<div class="min-w-[280px] md:min-w-[320px] snap-start group">
+<div class="aspect-[4/5] rounded-2xl bg-surface-container-low overflow-hidden relative mb-4">
+<img alt="Futuristic Tablet" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500 scale-110 group-hover:scale-100" data-alt="Minimalist glowing tablet device with thin bezels floating over a dark surface, soft purple atmospheric glow" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCASER1XIO404x0dE-l7Kl-qApnuZSwQW_FOtjeZ7FGhGGuCoYWI4lhhuoRSYoZLkj5DRCVVUWijbFQ1zKX8Z3_XXKiRKlBVpCAGa-YtS-V9qe4YFkv8N0gdxpAUShph6nob-mOf9V4gHUhhJolaZJoYGyzUwWD9qc5NJlz6fBI4sJ7Di0Ub3bRkvrcNjtHGUlmw9Q3CZ7urChClhT-Ugag1HVMO6qB5_Liwau6gEhBK-pwRDelYyvLyDJ4sOuS8kg9SDSgN7tAoFzL"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
+</div>
+<h4 class="text-white font-headline font-light tracking-tight px-1">Ether Tablet</h4>
+<p class="text-primary text-sm font-label px-1">$1,800</p>
+</div>
+<!-- Product Card 2 -->
+<div class="min-w-[280px] md:min-w-[320px] snap-start group">
+<div class="aspect-[4/5] rounded-2xl bg-surface-container-low overflow-hidden relative mb-4">
+<img alt="Luxury Watch" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500 scale-110 group-hover:scale-100" data-alt="Hyper-modern digital wrist watch with a circular glowing display and transparent strap on a dark background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCInMXwky_l6hvu-SYnwQsfjLNaYm_iRqGJfDHFgRX06vECF01dQMM8lyfkBbE6Bl8sFZnm1Xl7CTQEkjJ7bWihhhhncQfDgxr29pBG-s51pLt8laKuiRwzYa00SI3hwAJNgsm6F_q8HtKD9vtr-eXCMzA-Ruto0GdIU3YLI6_zzGMsIB5bp1Ph4dpaNI-ovZ1Q1StI-lzUzFyix3eId7iB-uiI7JWQ8qUZ2KsFxWyZo6_G8cRDJMmtBx3cJ_bUEWMxm5n-88teiE00"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
+</div>
+<h4 class="text-white font-headline font-light tracking-tight px-1">Vault Watch</h4>
+<p class="text-primary text-sm font-label px-1">$850</p>
+</div>
+<!-- Product Card 3 -->
+<div class="min-w-[280px] md:min-w-[320px] snap-start group">
+<div class="aspect-[4/5] rounded-2xl bg-surface-container-low overflow-hidden relative mb-4">
+<img alt="Controller" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500 scale-110 group-hover:scale-100" data-alt="Matte black gaming controller with neon cyan details floating in a dark studio setting with soft fill light" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDLP6k6dPFRMAX6YDOnyxymvah1qU594a8p8YN9EuI2eoSWlIuhxYuJIaH5Rrv4PdIy72bxDIriacHQMv0Ep_amwbMh1xJjVb4im1Zw9Rcz-1BT_FikXp_r8wxauVCOO08b2nvvnSsFLrb3bBUXFxLhfAYxmtpv-AxKxBOOdKtDLopyQRIyXTijBOc2hlDij_lqL-b-n9OiuyqmgR-aHU_vUifoSje20ILXZqnM5MksTDLp4Xte4O-7eL4jRKe257gZyJfI2hAWSpB4"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
+</div>
+<h4 class="text-white font-headline font-light tracking-tight px-1">Nexus Pad</h4>
+<p class="text-primary text-sm font-label px-1">$299</p>
+</div>
+</div>
+</section>
+</main>
+<!-- BottomNavBar -->
+<nav class="fixed bottom-0 left-0 w-full z-50 flex justify-around items-center px-8 pb-8 pt-4 bg-zinc-950/60 backdrop-blur-2xl rounded-t-[2rem] shadow-[0_-10px_40px_rgba(0,0,0,0.5)] tonal-transition">
+<div class="flex flex-col items-center justify-center text-zinc-500 p-3 hover:text-purple-200 transition-colors active:scale-90 duration-300">
+<span class="material-symbols-outlined">home</span>
+</div>
+<div class="flex flex-col items-center justify-center text-zinc-500 p-3 hover:text-purple-200 transition-colors active:scale-90 duration-300">
+<span class="material-symbols-outlined">search</span>
+</div>
+<div class="flex flex-col items-center justify-center text-zinc-500 p-3 hover:text-purple-200 transition-colors active:scale-90 duration-300">
+<span class="material-symbols-outlined">favorite</span>
+</div>
+<div class="flex flex-col items-center justify-center text-zinc-500 p-3 hover:text-purple-200 transition-colors active:scale-90 duration-300">
+<span class="material-symbols-outlined">person</span>
+</div>
+</nav>
+</body></html>
