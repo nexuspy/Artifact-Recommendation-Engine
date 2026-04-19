@@ -1,0 +1,15 @@
+__pycache__/
+*.py[cod]
+*$py.class
+venv/
+.env
+.vscode/
+.idea/
+*.html
+!templates/*.html
+engine_v1.html
+engine_v2.html
+dash.html
+catalog.html
+logic.html
+profile.html
