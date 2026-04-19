@@ -2,10 +2,13 @@ import pandas as pd
 from sklearn.metrics.pairwise import cosine_similarity
 import numpy as np
 
+import os
+
 class RecommendationEngine:
     def __init__(self):
-        self.products = pd.read_csv('data/products.csv')
-        self.purchases = pd.read_csv('data/purchases.csv')
+        base_path = os.path.dirname(__file__)
+        self.products = pd.read_csv(os.path.join(base_path, 'data/products.csv'))
+        self.purchases = pd.read_csv(os.path.join(base_path, 'data/purchases.csv'))
         # Aggregate ratings in case of multiple purchases of the same product by the same user
         self.purchases_agg = self.purchases.groupby(['user_id', 'product_id'])['rating'].mean().reset_index()
         self.user_product_matrix = self.purchases_agg.pivot(index='user_id', columns='product_id', values='rating').fillna(0)
